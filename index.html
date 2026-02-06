@@ -5,14 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Development Portfolio | Maanav Kataria</title>
-    <meta name="description" content="Portfolio of Maanav Kataria, a web developer who builds fast, responsive and modern websites using clean and efficient code.">
+    <meta name="description"
+        content="Portfolio of Maanav Kataria, a web developer who builds fast, responsive and modern websites using clean and efficient code.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/responsive.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./Images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -30,12 +35,21 @@
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact Me</a></li>
+                    <li class="mobile-only-btn">
+                        <a href="https://wa.me/923137248497?text=Hi%20Maanav" class="nav-hire-btn">Hire Me!</a>
+                    </li>
                 </ul>
 
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
             <div class="btn">
                 <div class="button accent">
-                    <a href="https://wa.me/923137248497">Hire Me!</a>
+                    <a href="https://wa.me/923137248497?text=Hi%20Maanav,%20I%20want%20to%20discuss%20a%20project.">Hire
+                        Me!</a>
                 </div>
             </div>
         </section>
@@ -46,8 +60,8 @@
                 <p>Front-end web developer focused on clean design, smooth user experience, and performance-driven
                     layouts. Also experienced in Shopify Virtual Assistance and Meta Ads management.</p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn-primary">View My Work</a>
-                    <a href="#contact" class="btn-secondary">Contact Me</a>
+                    <a href="#projects" class="btn-primary accent">View My Work</a>
+                    <a href="#contact" class="btn-secondary accent">Contact Me</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -89,41 +103,49 @@
         <section id="services" class="services-section light">
             <h2>My Services</h2>
             <div class="row">
-                <div class="service-card">
-                    <h4>Web Development</h4>
+                <div class="card">
+                    <h4><i class="i fa fa-code" aria-hidden="true"></i> Web Development</h4>
                     <p>Building fast, responsive, and modern websites using clean and efficient code.</p>
                 </div>
-                <div class="service-card">
-                    <h4>Shopify Virtual Assistance</h4>
+                <div class="card">
+                    <h4><i class="i fa fa-shopping-cart" aria-hidden="true"></i> Shopify Virtual Assistance</h4>
                     <p>Providing support for Shopify store management, product uploads, and customer service.</p>
                 </div>
-                <div class="service-card">
-                    <h4>Meta Ads Management</h4>
+                <div class="card">
+                    <h4><i class="i fa fa-bullhorn" aria-hidden="true"></i> Meta Ads Management</h4>
                     <p>Creating and managing Meta ad campaigns to drive traffic and increase conversions.</p>
                 </div>
             </div>
         </section>
 
-        <section id="certificates" class="certificates-section light">
+        <section id="certificates" class="certificates-section">
             <h2>Certificates & Awards</h2>
-            <div class="certificates-gallery">
-                <div class="cert-cards">
-                    <img src="./Images/cert_logo.png" alt="Logo" style="width: 100%; height: 100%;">
-                    <h4>Shopify VA</h4>
-                    <span>KineTEX Institute Daharki Campus</span>
+
+            <div class="row">
+
+                <div class="card">
+                    <div class="image">
+                        <img src="./Images/cert_logo.png" alt="KineTEX Institute">
+                    </div>
+                    <h4>Shopify Virtual Assistant</h4>
+                    <p>KineTEX Institute<br>Daharki Campus</p>
                 </div>
-                <div class="cert-cards">
-                    <img src="./Images/cert_logo.png" alt="Logo" style="width: 100%; height: 100%;">
+
+                <div class="card">
+                    <div class="image">
+                        <img src="./Images/cert_logo.png" alt="KineTEX Institute">
+                    </div>
                     <h4>Meta Ads Management</h4>
-                    <span>KineTEX Institute Daharki Campus</span>
+                    <p>KineTEX Institute<br>Daharki Campus</p>
                 </div>
+
             </div>
         </section>
 
         <section id="projects" class="projects-section">
             <h2>My Projects</h2>
-            <div class="projects-gallery">
-                <div class="project-card">
+            <div class="row">
+                <div class="card">
                     <h4>Calculator</h4>
 
                     <p>
@@ -132,14 +154,14 @@
                     </p>
 
                     <a href="https://maanavkataria.github.io/Calculator/" target="_blank" rel="noopener">
-                        Live Demo
+                        <button class="accent">Live Demo</button>
                     </a>
 
                     <a href="https://github.com/maanavkataria/Calculator" target="_blank" rel="noopener">
-                        View Code
+                        <button class="accent">View Code</button>
                     </a>
                 </div>
-                <div class="project-card">
+                <div class="card">
                     <h4>Digital Clock</h4>
 
                     <p>
@@ -148,55 +170,42 @@
                     </p>
 
                     <a href="https://maanavkataria.github.io/Digital-Clock/" target="_blank" rel="noopener">
-                        Live Demo
+                        <button class="accent">Live Demo</button>
                     </a>
 
                     <a href="https://github.com/maanavkataria/Digital-Clock" target="_blank" rel="noopener">
-                        View Code
+                        <button class="accent">View Code</button>
                     </a>
                 </div>
-                <div class="project-card">
+                <div class="card">
                     <h4>Villa Website</h4>
                     <p>
                         A responsive villa selling and purchasing website built using HTML and CSS,
                         focused on clean layouts, property showcasing, and user-friendly navigation.
                     </p>
 
-                    <a href="https://maanavkataria.github.io/Villa-Website/" target="_blank" rel="noopener">Live
-                        Demo</a>
-                    <a href="https://github.com/maanavkataria/Villa-Website" target="_blank" rel="noopener">View
-                        Code</a>
+                    <a href="https://maanavkataria.github.io/Villa-Website/" target="_blank" rel="noopener"><button
+                            class="accent">Live Demo</button></a>
+                    <a href="https://github.com/maanavkataria/Villa-Website" target="_blank" rel="noopener"><button
+                            class="accent">View Code</button></a>
                 </div>
 
 
-                <div class="project-card">
+                <div class="card">
                     <h4>NexTag E-Commerce Website</h4>
                     <p>
                         A static e-commerce website developed with HTML, CSS, and JavaScript,
                         featuring a modern UI, structured product sections, and smooth user interaction.
                     </p>
 
-                    <a href="https://maanavkataria.github.io/NexTag/" target="_blank" rel="noopener">Live Demo</a>
-                    <a href="https://github.com/maanavkataria/NexTag" target="_blank" rel="noopener">View
-                        Code</a>
+                    <a href="https://maanavkataria.github.io/NexTag/" target="_blank" rel="noopener"><button
+                            class="accent">Live Demo</button></a>
+                    <a href="https://github.com/maanavkataria/NexTag" target="_blank" rel="noopener"><button
+                            class="accent">View Code</button></a>
                 </div>
 
 
-                <div class="project-card">
-                    <h4>iTech Institute Website</h4>
-                    <p>
-                        A dynamic educational institute website built using HTML, CSS, Bootstrap,
-                        PHP, and MySQL, designed for responsive performance and database-driven
-                        content management.
-                    </p>
-
-                    <a href="https://your-itech-demo-link.com" target="_blank" rel="noopener">Live Demo</a>
-                    <a href="https://github.com/maanavkataria/itech-website" target="_blank" rel="noopener">View
-                        Code</a>
-                </div>
-
-
-                <div class="project-card">
+                <div class="card">
                     <h4>iTech Institute Website</h4>
                     <p>
                         A dynamic educational institute website built using HTML, CSS, Bootstrap,
@@ -205,11 +214,7 @@
                     </p>
 
                     <a href="https://github.com/maanavkataria/iTech" target="_blank" rel="noopener">
-                        View Code
-                    </a>
-
-                    <a href="./videos/itech-demo.mp4" target="_blank" rel="noopener">
-                        Watch Demo Video
+                        <button class="accent">View Code</button>
                     </a>
                 </div>
             </div>
@@ -218,30 +223,38 @@
         <section id="testimonials" class="testimonials-section">
             <h2>What People Say</h2>
 
-            <div class="testimonial-card">
-                <p>
-                    "He is a good person to take services from. He is very friendly and professional. He designs an
-                    online store attractive & user-friendly."
-                </p>
-                <h4>Tayyab Shamsi</h4>
-                <span>USA Shopify Store Owner</span>
-            </div>
+            <div class="row">
+                <div class="card">
 
-            <div class="testimonial-card">
-                <p>
-                    "Facebook Ads made simple with Maanav Kataria. Unlock your business potential effortlessly by
-                    trusting him. Get results, not headaches!"
-                </p>
-                <h4>Rana Muaz Ali</h4>
-                <span>Freelancer</span>
-            </div>
+                    <i class="i fa fa-quote-left" aria-hidden="true"></i>
+                    <p>
+                        "He is a good person to take services from. He is very friendly and professional. He designs an
+                        online store attractive & user-friendly."
+                    </p>
+                    <h4 class="i">Tayyab Shamsi</h4>
+                    <span>USA Shopify Store Owner</span>
+                </div>
 
-            <div class="testimonial-card">
-                <p>
-                    "Very friendly and professional person to take advice from👌"
-                </p>
-                <h4>Saif Khan</h4>
-                <span>Startup Founder</span>
+                <div class="card">
+
+                    <i class="i fa fa-quote-left" aria-hidden="true"></i>
+                    <p>
+                        "Facebook Ads made simple with Maanav Kataria. Unlock your business potential effortlessly by
+                        trusting him. Get results, not headaches!"
+                    </p>
+                    <h4 class="i">Rana Muaz Ali</h4>
+                    <span>Freelancer</span>
+                </div>
+
+                <div class="card">
+
+                    <i class="i fa fa-quote-left" aria-hidden="true"></i>
+                    <p>
+                        "Very friendly and professional person to take advice from👌"
+                    </p>
+                    <h4 class="i">Saif Khan</h4>
+                    <span>Startup Founder</span>
+                </div>
             </div>
         </section>
 
@@ -253,26 +266,44 @@
             </p>
 
             <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message"></textarea>
-                <button type="submit">Send Message</button>
+                <input type="text" placeholder="Enter Your Name" required>
+                <input type="email" placeholder="Enter Your Email" required>
+                <textarea placeholder="Enter Your Concern"></textarea>
+                <button class="accent" type="submit">Send Message</button>
             </form>
         </section>
     </div>
 
     <footer>
-        <h3>Maanav Kataria</h3>
-        <p>Front-End Web Developer</p>
+        <div class="footer-container">
+            <div class="logo">Maanav Kataria</div>
 
-        <div class="footer-links">
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Email</a>
+            <div class="links">
+                <a href="#about">About</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://linkedin.com/in/maanav-kataria" target="_blank" aria-label="LinkedIn">
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/maanavkataria" target="_blank" aria-label="GitHub">
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://instagram.com/maanav.mukesh.kataria" target="_blank" aria-label="Instagram">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
 
-        <p>© 2026 All rights reserved.</p>
+        <div class="copyright">
+            © 2026 Maanav Kataria. All rights reserved.
+        </div>
     </footer>
+
+    <script src="./JS/script.js"></script>
+
 </body>
 
 </html>

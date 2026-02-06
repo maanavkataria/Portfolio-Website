@@ -1,0 +1,214 @@
+/* --- RESPONSIVE CSS --- */
+
+/* Media query ko 1024px kar dein taaki menu break na ho */
+@media (max-width: 1024px) {
+    .container .header {
+        padding: 0 20px;
+    }
+
+    .about-content .text {
+        width: 100%;
+        padding: 40px 20px;
+        /* Mobile/Tablet par zyada gap */
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        /* Header ke thik niche */
+        left: 0;
+        width: 100%;
+
+        /* Poori screen (100vh) ki jagah ye use karein */
+        height: auto;
+        max-height: calc(100vh - 70px);
+        /* Screen se bahar na jaye */
+        overflow-y: auto;
+        /* Agar links zyada hon toh scroll ho sakein */
+
+        background-color: #2563EB;
+        padding: 30px 0;
+        /* Content ke upar niche gap */
+        text-align: center;
+        z-index: 999;
+
+        /* Dropdown effect ke liye shadow */
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar.active ul {
+        display: flex;
+        /* Animation ke liye optional */
+        animation: slideDown 0.3s ease-out;
+    }
+
+    /* Dropdown animation */
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .hamburger {
+        display: flex !important;
+        /* Hamburger ko dikhayein */
+    }
+
+    .btn {
+        display: none;
+        /* Header wala button chhupayein kyunki humne menu mein daal diya hai */
+    }
+
+    /* Hero section spacing fix */
+    .hero-section {
+        flex-direction: column-reverse;
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    .hero-content,
+    .hero-image {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .container .header {
+        padding: 0 20px;
+    }
+
+    .hero-section {
+        flex-direction: column-reverse;
+        /* Image upar, text niche */
+        text-align: center;
+    }
+
+    .hero-section .hero-content,
+    .hero-section .hero-image {
+        width: 100%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Hamburger Menu Toggle */
+    /* Menu ko pura screen cover karne aur center karne ke liye */
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        /* Vertical center */
+        align-items: center;
+        /* Horizontal center */
+        position: fixed;
+        /* Pure screen par lene ke liye */
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: #2563EB;
+        z-index: 999;
+        padding-bottom: 50px;
+    }
+
+    .navbar.active ul {
+        display: flex;
+    }
+
+    .navbar ul li {
+        margin: 15px 0;
+        /* Links ke beech gap */
+    }
+
+    /* Mobile Menu ke andar Hire Me button ka style */
+    .nav-hire-btn {
+        background-color: #22C55E;
+        /* Accent color */
+        padding: 10px 25px;
+        border-radius: 5px;
+        color: white !important;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    /* Original header button ko mobile par chupa dein */
+    .container .header>.btn {
+        display: none;
+    }
+
+    .navbar ul li a {
+        color: white;
+        font-size: 16px;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background-color: #0F172A;
+        border-radius: 2px;
+    }
+
+    /* About Section */
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-content .text {
+        width: 100%;
+        text-align: left;
+        /* Mobile par justify se behtar left alignment lagti hai */
+        padding: 20px;
+        /* Mobile par text ko edges se door rakhne ke liye */
+    }
+
+    .about-section p {
+        line-height: 1.6;
+        /* Lines ke beech gap badhane se readability behtar hogi */
+    }
+
+    /* Form and Buttons */
+    .contact-section form {
+        width: 90%;
+    }
+
+    .contact-section form button {
+        width: 100%;
+    }
+
+    .btn {
+        display: none;
+        /* Mobile par header button chupa sakte hain ya menu ke andar daal sakte hain */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+        /* Mobile par cards full width ho jayenge */
+    }
+
+    .hero-section h1 {
+        font-size: 24px;
+    }
+}
